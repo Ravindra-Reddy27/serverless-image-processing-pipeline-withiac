@@ -45,7 +45,7 @@ cd serverless-image-processing-pipeline-withiac
 Copy the example environment file and create a new `.env` file:
 
 ```bash
-cp .example.env .env
+cp .env.example .env
 ```
 
 NOTE : You only need add your `LOCALSTACK_AUTH_TOKEN` in the .env, rest leave as it is.
