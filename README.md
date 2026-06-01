@@ -68,7 +68,7 @@ AWS Lambda executes in a Linux environment. Because the Pillow library uses C-ex
 To solve this, use a temporary Docker container to pull the native `manylinux` wheels directly into the function directory:
 
 ```bash
-docker run --rm -v "${PWD}/src/image_processor:/var/task" python:3.10 \
+docker run --rm -v "${PWD}/src/image_processor:/var/task" python:3.10 `
   pip install Pillow==10.2.0 boto3==1.34.0 urllib3==1.26.18 -t /var/task
 ```
 
