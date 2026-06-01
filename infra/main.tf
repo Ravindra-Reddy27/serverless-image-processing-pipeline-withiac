@@ -31,10 +31,12 @@ provider "aws" {
 # --- S3 Buckets ---
 resource "aws_s3_bucket" "input_bucket" {
   bucket = "input-image-bucket-${var.unique_id}"
+  force_destroy = true
 }
 
 resource "aws_s3_bucket" "processed_bucket" {
   bucket = "processed-image-bucket-${var.unique_id}"
+  force_destroy = true
 }
 
 # --- SQS Queues ---
